@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Forms</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("PostParameter","Students"))
+        {
+            <input type="text" name="fname" />
+            <input type="text" name="lname" />
+            <br />
+            <input type="submit" value="click me" />
+        }
+
+    </div>
+</body>
+</html>

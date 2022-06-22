@@ -107,6 +107,7 @@
     <Content Include="Views\Students\Getallstudents.cshtml" />
     <Content Include="Views\Students\StudentDetails.cshtml" />
     <Content Include="Views\Students\StudentAddress.cshtml" />
+    <Content Include="Views\Students\Forms.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

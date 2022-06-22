@@ -35,6 +35,25 @@ namespace RoutingPract.Controllers
             var address = Students().Where(x=> x.Id == id).Select(x => x.Address).FirstOrDefault();
             return View(address);
         }
+
+        [HttpGet]
+        public ActionResult Forms()
+        {
+            return View();
+        }
+
+        [HttpPost]
+         public string PostParameter(string fname, string lname)
+        {
+            return " first name is " + fname + " lname is " + lname;
+        }
+
+
+
+
+
+
+
         private List<Student> Students()
         {
             return new List<Student>()
