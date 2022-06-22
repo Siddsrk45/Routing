@@ -11,30 +11,32 @@ namespace RoutingPract
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute(
-             name: "allstudents",
-             url: "students",
-             defaults: new { controller = "Students", action = "Getallstudents" }
-                );
+            routes.MapMvcAttributeRoutes();
 
-            routes.MapRoute(
-     name: "studentdetails",
-     url: "students/{id}",
-     defaults: new { controller = "Students", action = "StudentDetails" },
-     constraints: new
-     {
-         id = @"\d+"
-     }
-                );
+            //       routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //       routes.MapRoute(
+            //        name: "allstudents",
+            //        url: "students",
+            //        defaults: new { controller = "Students", action = "Getallstudents" }
+            //           );
 
-            routes.MapRoute(
-     name: "studentAddress",
-     url: "students/{id}/address",
-     defaults: new { controller = "Students", action = "StudentAddress" },
-     constraints: new {id = @"\d+"}
- 
-        );
+            //       routes.MapRoute(
+            //name: "studentdetails",
+            //url: "students/{id}",
+            //defaults: new { controller = "Students", action = "StudentDetails" },
+            //constraints: new
+            //{
+            //    id = @"\d+"
+            //}
+            //           );
+
+            //       routes.MapRoute(
+            //name: "studentAddress",
+            //url: "students/{id}/address",
+            //defaults: new { controller = "Students", action = "StudentAddress" },
+            //constraints: new {id = @"\d+"}
+
+            //   );
 
 
             routes.MapRoute(

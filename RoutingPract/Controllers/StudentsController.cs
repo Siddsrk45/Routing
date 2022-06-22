@@ -8,8 +8,10 @@ using RoutingPract.Models;
 
 namespace RoutingPract.Controllers
 {
+    [RoutePrefix("Students")]
     public class StudentsController : Controller
     {
+        [Route(" ")]
         // GET: Students
         public ActionResult Getallstudents()
         {
@@ -18,14 +20,16 @@ namespace RoutingPract.Controllers
             return View(students);
 
         }
+        [Route("{id:int}")]
         public ActionResult StudentDetails(int id)
         {
             var student = Students().FirstOrDefault(x => x.Id == id);
             return View(student);
 
-                //select details template for creating view 
+            //select details template for creating view 
 
         }
+        [Route("{id}/Address")]
         public ActionResult StudentAddress(int id)
         {
             var address = Students().Where(x=> x.Id == id).Select(x => x.Address).FirstOrDefault();
